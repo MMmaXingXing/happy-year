@@ -1,4 +1,6 @@
 module.exports = {
+  // 打包静态项目配置
+  pathPrefix: `/happy-year`,
   siteMetadata: {
     title: `Gatsby Default Starter`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
