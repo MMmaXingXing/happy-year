@@ -17,18 +17,23 @@ import "./index.css"
 
 const IndexPage = () => {
   const video = React.useRef()
-  if (video.current) {
-    const promise = video.current.play()
-    if (promise !== undefined) {
-      promise
-        .catch(error => {
-          // Auto-play was prevented
-          // Show a UI element to let the user manually start playback
-        })
-        .then(() => {
-          // Auto-play started
-        })
-    }
+  if (!video.current) {
+    const getVideo = setInterval(() => {
+      if (video.current) {
+        const promise = video.current.play()
+        if (promise !== undefined) {
+          promise
+            .catch(error => {
+              // Auto-play was prevented
+              // Show a UI element to let the user manually start playback
+            })
+            .then(() => {
+              // Auto-play started
+            })
+        }
+        clearInterval(getVideo)
+      }
+    }, 1000)
   }
 
   return (
