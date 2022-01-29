@@ -1,0 +1,121 @@
+.door {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+.text {
+  width: 60%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -30%);
+}
+.lantern {
+  width: 110px;
+  position: absolute;
+  transform: scale(1.5);
+  margin-top: 5%;
+}
+.lantern-left {
+  left: 0;
+}
+
+.lantern-right {
+  right: 0;
+}
+
+.bg {
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  animation: scroll 5s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translate(-50%, -50%) rotate(0) scale(1.4);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(365deg) scale(1.4);
+  }
+}
+
+video {
+  mix-blend-mode: screen;
+  object-fit: fill;
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 160px;
+  background: url(../images/023.png);
+  background-size: contain;
+}
+.tree,
+.lion {
+  position: absolute;
+  width: 150px;
+  bottom: 0;
+}
+
+.tree-right {
+  right: 0;
+}
+
+.tree-left {
+  left: 0;
+  transform: rotateY(180deg);
+}
+
+.lion-left {
+  left: 130px;
+  animation: lionrotate-left 2s infinite;
+}
+
+.lion-right {
+  right: 130px;
+  animation: lionrotate-right 2s infinite;
+}
+
+@keyframes lionrotate-left {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  35% {
+    transform: rotate(-15deg);
+  }
+
+  60% {
+    transform: rotate(15deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes lionrotate-right {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  35% {
+    transform: rotate(15deg);
+  }
+
+  60% {
+    transform: rotate(-15deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
